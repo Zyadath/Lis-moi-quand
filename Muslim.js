@@ -2,7 +2,6 @@ const émotions = {
       Joie: [
         "🌸Sourate Yunus (10:58):« Dis : 'C'est par la grâce d'Allah et Sa miséricorde que les gens doivent se réjouir.'»🌸",
         "🌸Sourate Al-Baqara (2:261):« Ceux qui dépensent leurs biens dans le sentier d'Allah sont comme une graine qui fait pousser sept épis, multipliant leur joie.»🌸",
-        "🌸Sourate Al-Imran (3:139):« Ne faiblissez pas et ne soyez pas attristés ; vous êtes supérieurs si vous êtes croyants.»🌸",
         "🌸Sourate Ash-Sharh (94:5-6):« A côté de la difficulté est, certes, une facilité.A côté de la difficulté est, certes, une facilité.»🌸",
         "🌸Sourate Al-An'am (6:141):« Et mangez des fruits et des bestiaux que vous a accordés Allah, comme source de joie et de gratitude.»🌸",
         "🌸Sourate Al-Furqan (25:74):« Seigneur, accorde-nous de nos épouses et de nos enfants la joie de nos yeux.»🌸",
@@ -36,32 +35,32 @@ const émotions = {
         "🌸Sourate Al-Hujurat (49:10): « Les croyants ne sont que des frères. Établissez la concorde entre vos frères, et craignez Allah, afin qu'on vous fasse miséricorde. »🌸",
       ],
       Solitude:[
-        "🌸Sourate Al-Baqara (2:186): « Et quand Mes serviteurs t'interrogent sur Moi, alors Je suis tout proche : Je réponds à l'appel de celui qui M'invoque quand il M'invoque. »🌸",
+        "🌸Sourate Al-Baqara (2:186): « [....] Je suis tout proche : Je réponds à l'appel de celui qui M'invoque quand il M'invoque. »🌸",
         "🌸Sourate Al-Hadid (57:4): « C'est Lui qui a créé les cieux et la terre en six jours puis S'est établi sur le Trône. Il sait ce qui pénètre dans la terre et ce qui en sort, ce qui descend du ciel et ce qui y monte. Et Il est avec vous où que vous soyez. »🌸",
         "🌸Sourate Yunus (10:62): « En vérité, les bien-aimés d'Allah seront à l'abri de toute crainte, et ils ne seront point affligés. »🌸",
         "🌸Sourate At-Tawbah (9:40): « Si vous ne lui portez pas secours, Allah l'a déjà secouru lorsque les mécréants l'avaient banni, et qu'il n'y avait que lui et un compagnon dans la grotte, et qu'il disait à son compagnon : 'Ne t'afflige pas, car Allah est avec nous.»🌸",
         "🌸Sourate Taha(20:46):«N'ayez pas peur! Je suis avec vous,j'entends et je vois.»🌸",
         "🌸Sourate Ar-Ra'd (13:11): « Il y a derrière chaque homme des anges qui se relaient devant lui et derrière lui, et qui le gardent par ordre d'Allah. »🌸",
         "🌸Sourate Qaf (50:16): « Nous avons effectivement créé l'homme et Nous savons ce que son âme lui suggère, et Nous sommes plus près de lui que sa veine jugulaire. »🌸",
-        "🌸Sourate Al-Ankabut (29:69): « Et quant à ceux qui luttent pour Notre cause, Nous les guiderons certes sur Nos sentiers. »🌸",
         "🌸Sourate Al-Fath (48:4): « C'est Lui qui a fait descendre la quiétude dans les cœurs des croyants afin qu'ils ajoutent foi à leur foi. »🌸",
         "🌸Sourate Ad-Duha (93:3-4): « Ton Seigneur ne t'a ni abandonné ni détesté. La vie dernière t'est, certes, meilleure que la vie présente. »🌸",
       ],
       Tristesse:[
+        "🌸Sourate Al-Imran (3:139):« Ne faiblissez pas et ne soyez pas attristés ; vous êtes supérieurs si vous êtes croyants.»🌸",
         "🌸Sourate Ash-Sharh (94:5-6): « A côté de la difficulté est, certes, une facilité. A côté de la difficulté est, certes, une facilité. »🌸",
         "🌸Sourate Al-Baqara (2:286): « Allah n'impose à aucune âme une charge supérieure à sa capacité. »🌸",
         "🌸Sourate Al-Imran (3:139): « Ne faiblissez pas et ne vous affligez pas, alors que vous êtes les supérieurs, si vous êtes croyants. »🌸",
         "🌸Sourate At-Tawbah (9:51): « Dis : Rien ne nous atteindra, sauf ce qu'Allah a prescrit pour nous. Il est notre Protecteur. »🌸",
         "🌸Sourate Yunus (10:107): « Et si Allah fait qu'un mal t'atteint, nul autre que Lui ne peut l'écarter. »🌸",
         "🌸Sourate Al-Anbiya (21:87): « Et Dhan-Nun (Jonas)… s'en alla, irrité. Il pensa que Nous n'allions pas l'éprouver. Puis il fit dans les ténèbres l'appel : 'Pas de divinité à part Toi ! Pureté à Toi ! J'ai été vraiment du nombre des injustes.' »🌸",
-        "🌸Sourate Yusuf (12:87): « Ô mes fils, partez et enquérez-vous de Joseph et de son frère, et ne désespérez pas de la miséricorde d'Allah. Ce sont seulement les gens mécréants qui désespèrent de la miséricorde d'Allah. »🌸",
+        "🌸Sourate Yusuf (12:87): « [...]et ne désespérez pas de la miséricorde d'Allah. Ce sont seulement les gens mécréants qui désespèrent de la miséricorde d'Allah. »🌸",
         "🌸Sourate Az-Zumar (39:53): « Dis : Ô Mes serviteurs qui avez commis des excès à votre propre détriment ! Ne désespérez pas de la miséricorde d'Allah. »🌸",
         "🌸Sourate Al-Baqara (2:153): « Ô vous qui avez cru ! Cherchez secours dans l'endurance et la prière. Car Allah est avec ceux qui sont patients. »🌸",
         "🌸Sourate Al-Ankabut (29:69): « Et quant à ceux qui luttent pour Notre cause, Nous les guiderons certes sur Nos sentiers. »🌸",
       ],
       Reconnaissance:[
         "🌸Sourate Ibrahim (14:7): « Et lorsque votre Seigneur proclama : 'Si vous êtes reconnaissants, très certainement J'augmenterai (Mes bienfaits) pour vous. Mais si vous êtes ingrats, Mon châtiment sera terrible.' »🌸",
-        "🌸Sourate Luqman (31:12): « Nous avons certes donné à Luqmân la sagesse : 'Sois reconnaissant envers Allah'. Celui qui est reconnaissant n'est reconnaissant que pour lui-même. Quant à celui qui est ingrat… En vérité, Allah se dispense de tout, et Il est digne de louange. »🌸",
+        "🌸Sourate Luqman (31:12): « [....] 'Sois reconnaissant envers Allah'. Celui qui est reconnaissant n'est reconnaissant que pour lui-même. Quant à celui qui est ingrat… En vérité, Allah se dispense de tout, et Il est digne de louange. »🌸",
         "🌸Sourate Al-Baqara (2:152): « Souvenez-vous de Moi donc, Je Me souviendrai de vous. Remerciez-Moi et ne soyez pas ingrats envers Moi. »🌸",
         "🌸Sourate An-Nahl (16:114): « Mangez donc de ce qu'Allah vous a attribué de licite et de bon ; et soyez reconnaissants pour le bienfait d'Allah, si c'est Lui que vous adorez. »🌸",
         "🌸Sourate Al-Insan (76:9): « Nous ne vous nourrissons que pour l'agrément d'Allah. Nous n'attendons de vous ni récompense ni gratitude. »🌸",
@@ -70,6 +69,7 @@ const émotions = {
         "🌸Sourate An-Naml (27:19): « Seigneur ! Inspire-moi afin que je rende grâce pour Ton bienfait dont Tu m'as comblé ainsi que mes père et mère. »🌸",
         "🌸Sourate Al-A'raf (7:10): « Nous vous avons certes établis sur la terre et Nous y avons placé pour vous des moyens d'existence. Peu de vous êtes reconnaissants ! »🌸",
         "🌸Sourate Al-Baqara (2:172): « Ô vous qui avez cru ! Mangez des délices que Nous vous avons attribués et remerciez Allah, si c'est Lui que vous adorez. »🌸",
+            
       ],
     }
 
