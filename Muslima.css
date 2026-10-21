@@ -1,0 +1,261 @@
+@charset "UTF-8";
+
+/* ==========================================================
+   Lis-moi quand... — design « Nuit calme »
+   Principe : une page très aérée où le verset est le héros.
+   Les six émotions sont de petites pastilles ; la couleur de
+   l'émotion choisie peut teinter toute la page (voir la fin
+   du fichier). Mode sombre automatique selon l'appareil.
+   ========================================================== */
+
+:root {
+    /* Clair */
+    --base: #f4f5fb;
+    --surface: #ffffff;
+    --encre: #1f2347;
+    --discret: #5d6288;
+    --trait: rgba(31, 35, 71, 0.14);
+
+    /* Couleur d'ambiance (change selon l'émotion) */
+    --accent: #8a93d6;
+
+    /* Émotions */
+    --joie: #e8a317;
+    --solitude: #d9638f;
+    --anxiete: #e8702a;
+    --tristesse: #4b82cf;
+    --colere: #cf3d4b;
+    --gratitude: #35a06a;
+
+    --titre: "Playfair Display", Georgia, "Times New Roman", serif;
+    --texte: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --base: #12142b;
+        --surface: #1c1f3d;
+        --encre: #eceefb;
+        --discret: #a3a8d0;
+        --trait: rgba(236, 238, 251, 0.18);
+        --accent: #7f88d6;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: color-mix(in srgb, var(--accent) 12%, var(--base));
+    color: var(--encre);
+    font-family: var(--texte);
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.9s ease;
+}
+
+/* ---------- Conteneur ---------- */
+
+.playfair-display-text {
+    width: min(100% - 2.5rem, 36rem);
+    margin-inline: auto;
+    padding: clamp(2.5rem, 8vw, 5rem) 0 3.5rem;
+    text-align: center;
+    font-family: var(--titre);
+}
+
+/* ---------- Titres ---------- */
+
+h1 {
+    margin: 0 0 2rem;
+    font-family: var(--titre);
+    font-size: clamp(1.5rem, 5.2vw, 2.1rem);
+    font-weight: 500;
+    line-height: 1.35;
+    text-wrap: balance;
+}
+
+h3 {
+    margin: 0 0 0.3rem;
+    font-family: var(--titre);
+    font-size: clamp(1.05rem, 3.6vw, 1.25rem);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--discret);
+}
+
+.playfair-display-text > p {
+    margin: 0 0 1.75rem;
+    font-family: var(--texte);
+    font-size: 0.92rem;
+    color: var(--discret);
+}
+
+/* ---------- Les six émotions : grille de pastilles ---------- */
+
+.émotion {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin: 0 auto clamp(2.5rem, 8vw, 4rem);
+    max-width: 28rem;
+}
+
+/* Les trois lignes du HTML se fondent dans la grille */
+.un,
+.deux,
+.trois {
+    display: contents;
+}
+
+.émotion i {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.85rem 1rem;
+    background: var(--surface);
+    border: 1.5px solid var(--trait);
+    border-radius: 999px;
+    font-size: 1.7rem;      /* taille de l'icône */
+    font-style: normal;
+    line-height: 1;
+    text-align: left;
+    cursor: pointer;
+    user-select: none;
+    transition: border-color 0.2s ease, transform 0.15s ease;
+}
+
+.émotion i::before {
+    flex: none;
+}
+
+.émotion i:hover {
+    border-color: currentColor;
+}
+
+.émotion i:active {
+    transform: scale(0.96);
+}
+
+.émotion i:focus-visible {
+    outline: 3px solid var(--encre);
+    outline-offset: 3px;
+}
+
+.mot {
+    margin: 0;
+    font-family: var(--texte);
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--encre);
+    overflow-wrap: anywhere;
+}
+
+#jaune  { color: var(--joie); }
+#rose   { color: var(--solitude); }
+#orange { color: var(--anxiete); }
+#bleu   { color: var(--tristesse); }
+#rouge  { color: var(--colere); }
+#vert   { color: var(--gratitude); }
+
+/* ---------- Le verset : le héros de la page ---------- */
+
+#texte {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 4.25rem;
+    min-height: 12rem;
+    font-family: var(--titre);
+    font-size: clamp(1.3rem, 4.6vw, 1.75rem);
+    font-weight: 400;
+    line-height: 1.75;
+    text-wrap: pretty;
+}
+
+/* Étoile à huit branches (deux carrés superposés) */
+#texte::before,
+#texte::after {
+    content: "";
+    position: absolute;
+    top: 0.75rem;
+    left: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-left: -0.8rem;
+    border: 1.5px solid var(--accent);
+    transition: border-color 0.9s ease;
+}
+
+#texte::before {
+    transform: rotate(0deg);
+}
+
+#texte::after {
+    transform: rotate(45deg);
+}
+
+/* ---------- Signature ---------- */
+
+.signature {
+    margin-top: 3rem;
+    font-family: var(--titre);
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--discret);
+}
+
+/* ---------- Une seule entrée en douceur ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+    .playfair-display-text {
+        animation: lever 0.9s ease both;
+    }
+}
+
+@keyframes lever {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body,
+    #texte::before,
+    #texte::after,
+    .émotion i {
+        transition: none;
+    }
+}
+
+/* ---------- Très petits écrans ---------- */
+
+@media (max-width: 360px) {
+    .émotion {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================
+   OPTION : teinter la page selon l'émotion choisie
+   Il suffit d'ajouter UNE ligne dans la fonction Choix() de
+   Muslim.js :   document.body.dataset.emotion = emotion;
+   (où « emotion » est le nom reçu en paramètre)
+   ========================================================== */
+
+body[data-emotion="Joie"]           { --accent: var(--joie); }
+body[data-emotion="Solitude"]       { --accent: var(--solitude); }
+body[data-emotion="Anxiété"]        { --accent: var(--anxiete); }
+body[data-emotion="Tristesse"]      { --accent: var(--tristesse); }
+body[data-emotion="Colère"]         { --accent: var(--colere); }
+body[data-emotion="Reconnaissance"] { --accent: var(--gratitude); }

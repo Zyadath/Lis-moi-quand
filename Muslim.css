@@ -1,81 +1,187 @@
-body{
-background-color:rgb(238, 190, 210);
-color: rgb(139, 103, 130);
+
+:root {
+    --rose-fond: #F5DDE5;
+    --rose: #D88AA8;
+    --mauve: #8E617C;
+    --creme: #FFF9F3;
+    --texte: #493544;
+    --ombre: 0 12px 35px rgba(142, 97, 124, 0.13);
 }
-.playfair-display-text{
-    background-image: url('FhGEBsod.jpg');
-    background-color: fixed;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 24px 14px;
+    background: var(--rose-fond);
+    color: var(--texte);
+    font-family: "DM Sans", sans-serif;
+}
+
+.playfair-display-text {
+    width: 100%;
+    max-width: 560px;
+    margin: 12px auto;
+    padding: 30px 22px;
+    background: var(--creme);
+    border: 1px solid rgba(142, 97, 124, 0.12);
+    border-radius: 28px;
+    box-shadow: var(--ombre);
+}
+
+h1 {
+    margin: 0 0 22px;
+    color: var(--mauve);
     font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 12px;
-    font-style: normal;
-    width: 500px;
-    margin: 20%;
-    margin-top: 50px;
-    padding: 30px;
-    height: auto;
-    border: none;
-    border-radius: 30px;
-    box-shadow: 10px 10px 10px 10px rgba(234, 156, 234, 0.7);
+    font-size: clamp(27px, 7vw, 36px);
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
 }
-.un,.deux,.trois{
+
+h3 {
+    margin: 0 0 10px;
+    color: var(--mauve);
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+    font-weight: 500;
+    text-align: center;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.playfair-display-text > p {
+    margin: 0 0 24px;
+    text-align: center;
+    color: #796879;
+}
+
+.émotion {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 22px 0 26px;
+}
+
+.un,
+.deux,
+.trois {
+    display: contents;
+}
+
+.émotion i {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-i:active{
-    transform: scale(O.7);
-}
-i:hover{
+    min-height: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 14px 8px;
+    border: 1px solid rgba(142, 97, 124, 0.12);
+    border-radius: 20px;
+    background: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(142, 97, 124, 0.06);
     cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
 }
-#jaune{
-    color: yellow;
+
+.émotion i:active {
+    transform: scale(0.96);
 }
-#rose{
-    color: rgb(253, 172, 185);
-    margin-right: 50px;
+
+.émotion i:hover {
+    box-shadow: 0 8px 18px rgba(142, 97, 124, 0.14);
 }
-#orange {
-    color: rgb(252, 190, 76);
-}
-#bleu{
-    color: rgb(172, 172, 255);
-    margin-right: 50px;
-}
-#rouge{
-    color: rgb(252, 37, 37);
-}
-#vert{
-    color: rgb(115, 252, 115);
-}
-.mot{
-    display: inline-block;
-    text-align: center;
-    font-style: normal;
-    margin-left: 10px;
-}
-h1{
-    text-align: center;
+
+.émotion i::before {
     font-size: 30px;
 }
-h3{
+
+.mot {
+    margin: 0;
+    color: var(--texte);
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#jaune::before {
+    color: #E5B83F;
+}
+
+#rose::before {
+    color: #D88AA8;
+}
+
+#orange::before {
+    color: #E9A04B;
+}
+
+#bleu::before {
+    color: #829DCE;
+}
+
+#rouge::before {
+    color: #D96770;
+}
+
+#vert::before {
+    color: #72A98A;
+}
+
+#texte {
+    margin-top: 10px;
+    padding: 20px 16px;
+    border-left: 3px solid var(--rose);
+    border-radius: 4px 16px 16px 4px;
+    background: #FBEAF0;
+    color: #5C4355;
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    line-height: 1.9;
     text-align: center;
-    font-size: 25px;
-    margin-top: -5px;
+    overflow-wrap: anywhere;
 }
-p{
-    font-size: 18px;
-}
-#texte{
-    text-align: center;
-    margin-bottom: 5px;
-}
-.émotion{
-    margin-top: -10px;
-}
-.signature{
+
+.signature {
+    margin-top: 20px;
+    color: var(--mauve);
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+    font-style: italic;
     text-align: right;
-    margin-bottom: -10px;
+}
+
+@media (min-width: 600px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 35px 20px;
+    }
+
+    .playfair-display-text {
+        padding: 38px;
+    }
+
+    .émotion {
+        gap: 16px;
+    }
+
+    .émotion i {
+        min-height: 115px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .émotion i {
+        transition: none;
+    }
 }
