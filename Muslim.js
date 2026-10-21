@@ -77,6 +77,9 @@ function Choix(émotion) {
   const phrases = émotions[émotion];
   const index = Math.floor(Math.random() * phrases.length);
   document.getElementById("texte").textContent = phrases[index];
+  document.body.dataset.emotion = emotion;
+  const t = document.getElementById("texte");
+  t.classList.remove("apparait"); void t.offsetWidth; t.classList.add("apparait");
 }
 
 alert("[Sourate 13: Verset 28]:« N’est-ce point par l’évocation d’Allah que se tranquillisent les cœurs ? »🤍")
